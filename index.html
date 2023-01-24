@@ -20,8 +20,8 @@
             <header>
                 <img src="img/logo.png" alt="logo">
                 <div class="command-box">
-                    <input type="text">
-                    <button>Aggiungi</button>
+                    <input type="text" placeholder="Nuova task" v-model="newTask">
+                    <button @click="addTask()">Aggiungi</button>
                 </div>
             </header>
     

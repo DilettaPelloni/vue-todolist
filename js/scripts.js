@@ -3,6 +3,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+            newTask: '',
             todolist: [
                 {
                     text: 'fare la lavatrice',
@@ -31,7 +32,16 @@ createApp({
     methods: {
         removeItem: function(index) {
             this.todolist.splice(index,1);
-        }//revomeItem
+        },//revomeItem
+        addTask: function() {
+            if(this.newTask != ''){
+                this.todolist.push({
+                    text: this.newTask,
+                    done: false
+                });
+                this.newTask = '';
+            }
+        }//addTask
     }//methods
 
 }).mount('#app')
