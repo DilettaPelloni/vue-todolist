@@ -29,8 +29,12 @@
 
                 <div class="list-box">
                     <ul>
-                        <li>
-                            prova
+                        <li v-for="item in todolist">
+                            <span :class="{
+                                'done': item.done == true
+                            }">
+                                {{item.text}}
+                            </span>
                             <i class="fa-solid fa-xmark"></i>
                         </li>
                     </ul>
