@@ -29,16 +29,16 @@
 
                 <div class="list-box">
                     <ul>
-                        <li v-for="item in todolist">
+                        <li v-for="(item, index) in todolist">
                             <span :class="{
                                 'done': item.done == true
                             }">
                                 {{item.text}}
                             </span>
-                            <i class="fa-solid fa-xmark"></i>
+                            <i class="fa-solid fa-xmark" @click="removeItem(index)"></i>
                         </li>
                     </ul>
-                </div>
+                </div><!-- CHIUSURA LIST-BOX -->
     
             </main>
         </div>

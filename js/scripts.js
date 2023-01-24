@@ -24,7 +24,14 @@ createApp({
                     text: 'giocare a golf',
                     done: false
                 }
-            ]
-        }
-    }
+            ]//to do list
+        } //return
+    },//data
+
+    methods: {
+        removeItem: function(index) {
+            this.todolist.splice(index,1);
+        }//revomeItem
+    }//methods
+
 }).mount('#app')
