@@ -20,7 +20,7 @@
             <header>
                 <img src="img/logo.png" alt="logo">
                 <div class="command-box">
-                    <input type="text" placeholder="Nuova task" v-model="newTask">
+                    <input type="text" placeholder="Nuova task" v-model="newTask" @keyup.enter="addTask()">
                     <button @click="addTask()">Aggiungi</button>
                 </div>
             </header>
@@ -28,11 +28,15 @@
             <main>
 
                 <div class="list-box">
-                    <ul>
+                    <h2 v-if="todolist.length == 0">
+                        Inserisci una task!
+                    </h2>
+                    <ul v-else>
                         <li v-for="(item, index) in todolist">
                             <span :class="{
                                 'done': item.done == true
-                            }">
+                            }"
+                            @click="toggleDone(item)">
                                 {{item.text}}
                             </span>
                             <i class="fa-solid fa-xmark" @click="removeItem(index)"></i>

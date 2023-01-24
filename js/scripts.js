@@ -41,7 +41,10 @@ createApp({
                 });
                 this.newTask = '';
             }
-        }//addTask
+        },//addTask
+        toggleDone: function(item) {
+            item.done = !item.done;
+        }
     }//methods
 
 }).mount('#app')
