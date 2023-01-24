@@ -8,3 +8,59 @@
 body {
     font-family: 'Montserrat', sans-serif;
 }
+
+
+/* HEADER */
+header {
+    padding: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+header img {
+    height: 70px;
+}
+
+header .command-box {
+    margin-top: 2rem;
+}
+
+header .command-box input {
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+    width: 300px;
+    border-radius: 10px;
+    border: 1px solid darkgrey;
+}
+
+header .command-box button {
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    border: 1px solid darkgrey;
+}
+
+
+/* LISTBOX */
+.list-box {
+    margin: 0 auto;
+    padding: 2rem;
+    max-width: 1000px;
+    border-radius: 15px;
+    background-color: #f5f7f7;
+}
+
+.list-box ul {
+    list-style: none;
+}  
+
+.list-box ul li {
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #dadee1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-box ul li:hover {
+    background-color: white;
+    border-radius: 10px;
+}
